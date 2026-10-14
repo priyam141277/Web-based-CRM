@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8">
+  <title>CRM Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="topbar">
+    <h1> Lead Management CRM</h1>
+    <input type="text" id="search" placeholder="Search leads..." />
+  </header>
+
+  <div class="stats">
+    <div class="stat-card">
+      <h3>Total Leads</h3>
+      <p id="totalLeads">0</p>
+    </div>
+    <div class="stat-card">
+      <h3>New</h3>
+      <p id="newLeads">0</p>
+    </div>
+    <div class="stat-card">
+      <h3>Contacted</h3>
+      <p id="contactedLeads">0</p>
+    </div>
+  </div>
+<div class="charts">
+  <div class="chart-box">
+    <canvas id="statusChart"></canvas>
+  </div>
+  <div class="chart-box">
+    <canvas id="sourceChart"></canvas>
+  </div>
+</div>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Source</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Assigned To</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</body>
+</html>
